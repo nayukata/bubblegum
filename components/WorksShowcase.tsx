@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useLayoutEffect, useRef, useState, ViewTransition } from "react";
 import { HearcatMock } from "./mocks/HearcatMock";
+import { WellbeingMock } from "./mocks/WellbeingMock";
 import { QiitaMock } from "./mocks/QiitaMock";
 import { TermMock } from "./mocks/TermMock";
 import { SiteMock } from "./mocks/SiteMock";
@@ -24,6 +25,7 @@ import { saveWorksReturnScroll } from "@/lib/worksReturn";
 
 const MOCK_COMPONENTS = {
   hearcat: HearcatMock,
+  wellbeing: WellbeingMock,
   qiita: QiitaMock,
   term: TermMock,
   site: SiteMock,

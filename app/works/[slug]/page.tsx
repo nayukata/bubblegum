@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ViewTransition } from "react";
 import { getWorkBySlug, themeToCssVars, WORKS } from "@/lib/works";
 import { HearcatMock } from "@/components/mocks/HearcatMock";
+import { WellbeingMock } from "@/components/mocks/WellbeingMock";
 import { QiitaMock } from "@/components/mocks/QiitaMock";
 import { TermMock } from "@/components/mocks/TermMock";
 import { SiteMock } from "@/components/mocks/SiteMock";
@@ -11,6 +12,7 @@ import { BackToWorksLink } from "@/components/BackToWorksLink";
 
 const MOCK_COMPONENTS = {
   hearcat: HearcatMock,
+  wellbeing: WellbeingMock,
   qiita: QiitaMock,
   term: TermMock,
   site: SiteMock,

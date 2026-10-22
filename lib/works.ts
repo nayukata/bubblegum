@@ -10,7 +10,7 @@ export type WorkTheme = {
   btnBg: string;
 };
 
-export type WorkMock = "hearcat" | "qiita" | "term" | "site";
+export type WorkMock = "hearcat" | "wellbeing" | "qiita" | "term" | "site";
 
 export type Work = {
   slug: string;
@@ -66,6 +66,16 @@ const LAVENDER_THEME = {
   btnBg: "rgba(255,255,255,0.55)",
 } satisfies WorkTheme;
 
+const TEAL_THEME = {
+  bg: "#EAF6F4",
+  ink: "#33313E",
+  soft: "#6B6878",
+  faint: "#9B98A8",
+  accent: "#0D9488",
+  track: "rgba(13,148,136,0.22)",
+  btnBg: "rgba(255,255,255,0.55)",
+} satisfies WorkTheme;
+
 export const WORKS = [
   {
     slug: "hearcat",
@@ -85,8 +95,25 @@ export const WORKS = [
     mock: "hearcat",
   },
   {
-    slug: "persona-ui",
+    slug: "wellbeing-log",
     num: "02",
+    tag: "product — iOS / Android app",
+    title: "Well-Being Log +",
+    lede: "働く人の健康とウェルビーイングを調べる研究のための、参加者向けアプリ。アンケートへの回答と、ヘルスケアのデータの連携を、毎日の負担にならない形にまとめました。",
+    cta: "view →",
+    body: [
+      "慶應義塾大学医学部 健康・医療・社会イノベーションセンターと森ビル株式会社が共同で進める「働く人の健康・ウェルビーイング調査」の研究用アプリです。麻布台ヒルズ入居企業などで働く方のうち、研究に同意した参加者が使います。",
+      "参加者はアプリから、ウェルビーイングや働き方についてのアンケートに答え、Apple のヘルスケアや Android のヘルスコネクトに記録された歩数や睡眠などのデータを研究に提供します。データを渡す範囲は参加者が自分で選べて、いつでも見直せるようにしています。",
+      "業務として開発に参加し、パスワードやメールアドレスの変更をアプリ内で完結させる画面、アプリ更新の配信時に起きていた強制終了の修正、クラッシュの監視の導入などを担当しました。",
+    ],
+    externalUrl: "https://apps.apple.com/jp/app/well-being-log/id6803768488",
+    externalLabel: "App Store で見る →",
+    theme: TEAL_THEME,
+    mock: "wellbeing",
+  },
+  {
+    slug: "persona-ui",
+    num: "03",
     tag: "featured article",
     title: "ペルソナ×UI の記事",
     lede: "Qiita で 900 を超える LGTM をいただいた代表記事。AI とペルソナ設計の話。",
@@ -103,7 +130,7 @@ export const WORKS = [
   },
   {
     slug: "agent-skills",
-    num: "03",
+    num: "04",
     tag: "oss — claude code plugins",
     title: "agent-skills",
     lede: "Claude Code のスキルを配布している自作の plugin marketplace。PR 作成やデザインのヒアリングなど、開発の面倒ごとをスキルにして配っています。",
@@ -120,7 +147,7 @@ export const WORKS = [
   },
   {
     slug: "this-site",
-    num: "04",
+    num: "05",
     tag: "playground",
     title: "このサイト自体",
     lede: "泡の演出も音も、全部コードで合成しています。オープニングをもう一度見たくなったら、フッターからどうぞ。",

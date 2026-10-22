@@ -847,6 +847,112 @@ h2.sec-title {
   border-radius: 999px;
 }
 
+.m-wellbeing {
+  background: linear-gradient(170deg, #ffffff, #eaf6f4);
+  color: var(--ink);
+  box-shadow: 0 24px 80px -24px rgba(13, 148, 136, 0.35);
+}
+.m-wellbeing .tbar {
+  color: #0d9488;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(13, 148, 136, 0.12);
+}
+.m-wellbeing .tbar .sync::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #0d9488;
+  margin-right: 7px;
+  animation: rec-pulse 1.6s ease-in-out infinite;
+}
+.m-wellbeing .wbody {
+  padding: 20px 22px 24px;
+  text-align: left;
+}
+.m-wellbeing .survey {
+  background: #ffffff;
+  border: 1px solid rgba(13, 148, 136, 0.14);
+  border-radius: 14px;
+  padding: 16px 18px 14px;
+  margin-bottom: 14px;
+}
+.m-wellbeing .cap {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: #0d9488;
+  margin-bottom: 8px;
+}
+.m-wellbeing .q {
+  font-family: var(--disp);
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  margin-bottom: 14px;
+}
+.m-wellbeing .scale {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+.m-wellbeing .scale i {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(13, 148, 136, 0.35);
+  background: rgba(13, 148, 136, 0.05);
+}
+.m-wellbeing .scale i.on {
+  background: radial-gradient(circle at 32% 28%, #5eead4, #0d9488 70%);
+  border-color: #0d9488;
+  animation: wb-swell 3s ease-in-out infinite;
+}
+.m-wellbeing .ends {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 10.5px;
+  color: var(--ink-faint);
+}
+.m-wellbeing .stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.m-wellbeing .stat {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(13, 148, 136, 0.14);
+  border-radius: 12px;
+  padding: 11px 14px 12px;
+}
+.m-wellbeing .stat .k {
+  display: block;
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin-bottom: 4px;
+}
+.m-wellbeing .stat b {
+  font-weight: 400;
+  font-size: 22px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.m-wellbeing .stat small {
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+@keyframes wb-swell {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.14);
+  }
+}
+
 .m-term {
   background: #26232f;
   color: #d9d5e6;
@@ -1347,6 +1453,8 @@ body.works-dive #soundBtn {
   .op-tap,
   .m-hearcat .wave i,
   .m-hearcat .tbar .rec::before,
+  .m-wellbeing .tbar .sync::before,
+  .m-wellbeing .scale i.on,
   .m-hearcat .row.live p::after,
   .m-term .cur::after,
   .m-site .b {
